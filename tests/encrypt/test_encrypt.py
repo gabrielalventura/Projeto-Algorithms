@@ -5,3 +5,6 @@ import pytest
 def test_encrypt_message():
     with pytest.raises(TypeError, match="tipo inválido para key"):
         encrypt_message("python", 1.45)
+
+    with pytest.raises(TypeError, match="tipo inválido para message"):
+        encrypt_message(23, 2)
