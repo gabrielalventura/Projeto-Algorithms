@@ -8,3 +8,5 @@ def test_encrypt_message():
 
     with pytest.raises(TypeError, match="tipo inválido para message"):
         encrypt_message(23, 2)
+
+    assert encrypt_message("python", 9) == "nohtyp"
