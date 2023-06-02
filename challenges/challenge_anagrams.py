@@ -33,5 +33,10 @@ def merge_sort(info):
 
 
 def is_anagram(first_string, second_string):
-    """Faça o código aqui."""
-    raise NotImplementedError
+    word_one = first_string.lower()
+    word_two = second_string.lower()
+
+    mix_one = ''.join(merge_sort(word_one))
+    mix_two = ''.join(merge_sort(word_two))
+
+    return mix_one == mix_two
