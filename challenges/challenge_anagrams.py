@@ -13,6 +13,7 @@ def merge(left, right, merged):
             left_p += 1
         else:
             merged[left_p + right_p] = right[right_p]
+            right_p += 1
 
     for left_p in range(left_p, len(left)):
         merged[left_p + right_p] = left[left_p]
