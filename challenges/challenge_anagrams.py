@@ -23,6 +23,15 @@ def merge(left, right, merged):
     return merged
 
 
+def merge_sort(info):
+    if len(info) <= 1:
+        return info
+
+    mid = len(info) // 2
+    left, right = merge_sort(info[:mid]), merge_sort(info[mid:])
+    return merge(left, right, info.copy())
+
+
 def is_anagram(first_string, second_string):
     """Faça o código aqui."""
     raise NotImplementedError
