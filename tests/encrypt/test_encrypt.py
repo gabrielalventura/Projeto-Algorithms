@@ -12,3 +12,5 @@ def test_encrypt_message():
     assert encrypt_message("python", 6) == "nohtyp"
 
     assert encrypt_message("python", 3) == "htyp_no"
+
+    assert encrypt_message("python", 2) == "noh_typ"
