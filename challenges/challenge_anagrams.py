@@ -33,10 +33,16 @@ def merge_sort(info):
 
 
 def is_anagram(first_string, second_string):
-    word_one = first_string.lower()
-    word_two = second_string.lower()
+    if (
+        not first_string
+        or not second_string
+    ):
+        return first_string, second_string, False
 
-    mix_one = ''.join(merge_sort(word_one))
-    mix_two = ''.join(merge_sort(word_two))
+    f_string = list(first_string.lower())
+    s_string = list(second_string.lower())
+
+    mix_one = ''.join(merge_sort(f_string))
+    mix_two = ''.join(merge_sort(s_string))
 
     return mix_one == mix_two
