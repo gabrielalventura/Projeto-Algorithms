@@ -45,10 +45,10 @@ def is_anagram(first_string, second_string):
     ):
         return first_string, second_string, False
 
-    f_string = first_string.lower()
-    s_string = second_string.lower()
+    f_string = list(first_string.lower())
+    s_string = list(second_string.lower())
 
-    mix_one = "".join(merge_sort(list(f_string)))
-    mix_two = "".join(merge_sort(list(s_string)))
+    mix_one = "".join(merge_sort(f_string))
+    mix_two = "".join(merge_sort(s_string))
 
     return (mix_one, mix_two, mix_one == mix_two)
