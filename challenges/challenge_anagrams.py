@@ -42,8 +42,10 @@ def is_anagram(first_string, second_string):
     if (
         not first_string
         or not second_string
+        or first_string == ''
+        or second_string == ''
     ):
-        return first_string, second_string, False
+        return (first_string, second_string, False)
 
     f_string = list(first_string.lower())
     s_string = list(second_string.lower())
